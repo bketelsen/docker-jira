@@ -37,6 +37,8 @@ RUN wget "http://www.atlassian.com/software/jira/downloads/binary/atlassian-jira
     && chmod -R 777    "/usr/local/atlassian/jira/logs" \
     && chmod -R 777    "/usr/local/atlassian/jira/work"
 
+ADD mysql-connector-java-5.1.32-bin.jar /usr/local/atlassian/jira/lib/
+
 # set the current user as ``jira`` since starting the server would execute as current user
 USER jira
 
